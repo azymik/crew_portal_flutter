@@ -65,7 +65,7 @@ class HomeScreen extends StatelessWidget {
                   const ListTile(
                     leading: Icon(Icons.local_airport_outlined),
                     title: Text('Autoland (A/C)'),
-                    subtitle: Text('last done 09/12/22'),
+                    subtitle: Text('last done 10/12/22'),
                     trailing: Text('valid till 06/06/23'),
                     isThreeLine: true,
                   ),
