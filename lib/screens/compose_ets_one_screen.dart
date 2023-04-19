@@ -23,11 +23,16 @@ class _ComposeETSOneScreenState extends State<ComposeETSOneScreen> {
       drawer: const CustomDrawer(),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 2.0),
+          padding: const EdgeInsets.symmetric(horizontal: 8.0),
           child: Column(
             children: [
+              const Card(
+                child: ListTile(
+                  subtitle: Text(
+                      'เข้าได้เฉพาะ instructor เพื่อกรอก eTS1 เบื้องต้นให้ใส่ได้ทีละคน เพื่อลดโอกาสผิดพลาด'),
+                ),
+              ),
               Card(
-                margin: const EdgeInsets.all(8),
                 child: Padding(
                   padding:
                       const EdgeInsets.symmetric(vertical: 8.0, horizontal: 4),
@@ -67,7 +72,6 @@ class _ComposeETSOneScreenState extends State<ComposeETSOneScreen> {
               ),
               const Text('Candidate\'s Details'),
               Card(
-                margin: const EdgeInsets.all(8),
                 child: Padding(
                   padding:
                       const EdgeInsets.symmetric(vertical: 8, horizontal: 4),
@@ -139,7 +143,6 @@ class _ComposeETSOneScreenState extends State<ComposeETSOneScreen> {
               ),
               const Text('Flight/Simulator Details'),
               Card(
-                margin: const EdgeInsets.all(8),
                 child: Padding(
                   padding:
                       const EdgeInsets.symmetric(vertical: 8.0, horizontal: 4),
@@ -202,7 +205,6 @@ class _ComposeETSOneScreenState extends State<ComposeETSOneScreen> {
               ),
               const Text('Session Details'),
               Card(
-                margin: const EdgeInsets.all(8),
                 child: Padding(
                   padding:
                       const EdgeInsets.symmetric(vertical: 8.0, horizontal: 4),
@@ -422,7 +424,7 @@ class _ComposeETSOneScreenState extends State<ComposeETSOneScreen> {
                         segments: const [
                           ButtonSegment(
                             value: 'Line',
-                            label: Text('Line'),
+                            label: FittedBox(child: Text('Line')),
                           ),
                           ButtonSegment(
                             value: 'CCQ',

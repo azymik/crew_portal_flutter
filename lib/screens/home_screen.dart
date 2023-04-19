@@ -21,6 +21,12 @@ class HomeScreen extends StatelessWidget {
           child: ListView(
             children: [
               const Card(
+                child: ListTile(
+                  subtitle: Text(
+                      'เป็นหน้าแรกที่จะเจอหลังจากเปิด App มา ใช้บอกข้อมูลสำคัญ หรือใช้บ่อยๆ นอกจากนี้ หากมี notification อะไรสำคัญ จะให้มาอยู่ที่หน้านี้ด้วย'),
+                ),
+              ),
+              const Card(
                   child: ListTile(
                 leading: Icon(Icons.library_books),
                 title: Text('License'),

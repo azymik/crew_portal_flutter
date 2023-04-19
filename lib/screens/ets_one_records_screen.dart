@@ -14,8 +14,18 @@ class ETSOneRecordsScreen extends StatelessWidget {
         title: const Text('eTS1 Records'),
       ),
       drawer: const CustomDrawer(),
-      body: const Center(
-        child: Text('eTS1 Records Screen'),
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 8),
+        child: ListView(
+          children: const [
+            Card(
+              child: ListTile(
+                subtitle: Text(
+                    'eTS1 record ที่ผ่านมา โดยจะเป็น list และสามารถ tap เข้าไปดูรายละเอียดได้'),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

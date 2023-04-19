@@ -14,8 +14,41 @@ class AnnouncementScreen extends StatelessWidget {
         title: const Text('Announcement'),
       ),
       drawer: const CustomDrawer(),
-      body: const Center(
-        child: Text('Announcement Screen'),
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 8),
+        child: Column(
+          children: [
+            Expanded(
+              child: Container(
+                margin: const EdgeInsets.symmetric(horizontal: 4),
+                decoration: BoxDecoration(
+                    color: Colors.indigo.shade50,
+                    borderRadius: BorderRadius.circular(16)),
+                child: ListView(
+                  children: const [
+                    ListTile(
+                        subtitle: Text(
+                            'สำหรับ Management หรือ Admin ใช้ Announcement')),
+                  ],
+                ),
+              ),
+            ),
+            Card(
+              child: Row(
+                children: [
+                  const Expanded(
+                    child: TextField(
+                      decoration: InputDecoration(
+                          border: InputBorder.none,
+                          contentPadding: EdgeInsets.symmetric(horizontal: 16)),
+                    ),
+                  ),
+                  IconButton(onPressed: () {}, icon: const Icon(Icons.send))
+                ],
+              ),
+            )
+          ],
+        ),
       ),
     );
   }

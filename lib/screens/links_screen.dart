@@ -19,6 +19,12 @@ class LinksScreen extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 8.0),
           child: ListView(
             children: [
+              const Card(
+                child: ListTile(
+                  subtitle: Text(
+                      'Portal สำหรับ website ต่างๆ ที่เกี่ยวข้องกับการปฏิบัติงาน หรือให้ข้อมูลที่จำเป็น'),
+                ),
+              ),
               ElevatedButton(
                   onPressed: () async {
                     final url = Uri.parse(

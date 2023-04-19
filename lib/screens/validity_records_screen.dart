@@ -19,6 +19,12 @@ class ValidityRecordsScreen extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 8.0),
           child: ListView(
             children: [
+              const Card(
+                child: ListTile(
+                  subtitle: Text(
+                      'หน้านี้จะใช้ข้อมูลจาก AIMS ซึ่งจะทำให้สามารถ tracking ได้แม่นยำ และเป็น source เดียวกัน โดยจะใช้วิธี export ทุกสิ้นเดือน โดย admin ซึ่งขึ้นตอนนั้นไม่ยาก จะทำเป็น one-click button ให้'),
+                ),
+              ),
               ValidityCard(
                 topic: 'LICENSE ATPL/CPL',
                 firstLine: 'valid till: 31/10/2023',
